@@ -1,0 +1,11 @@
+開設方法
+lkcodeのドライブ
+
+Git
+https://github.com/lumijoe/zero003
+
+サイト
+https://lkcodetest.sakura.ne.jp/zero003/
+
+管理画面
+https://lkcodetest.sakura.ne.jp/zero003/wp-admin
