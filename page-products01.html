@@ -60,8 +60,8 @@
         <section style="background-color: rgb(251, 251, 251); height: 350px;">
             <div style="background-color: #dfa3a3; margin: 0 auto;">
                 <h2>Product</h2>
-                <div>
-                    <!-- 検索用の入力フィールド -->
+                <div style="margin: 0 auto; width: 80%; text-align: center; padding-bottom: 20px;">
+                    <!-- 検索用の入力フィールド上段 -->
                     <input type="text" id="search-input" style="border: 1px solid #232323; width: 400px;" placeholder="キーワードを入力して検索">
                     <button class="btn btn-outline-success" type="button" id="button-addon2"><i class="fas fa-search"></i> 検索</button>
                 </div>
@@ -72,47 +72,52 @@
                     <li><button class="btn btn-outline-success" type="button" id="btn-material"><i class="fas fa-search"></i> 処理材料で検索</button></li>
                     <li><button class="btn btn-outline-success" type="button" id="btn-purpose"><i class="fas fa-search"></i>用途で検索</button></li>
                 </ul>
+                <div>
+                    <!-- 検索用の入力フィールド下段 -->
+                    <!-- <input type="text" id="search-input" style="border: 1px solid #232323; width: 400px;" placeholder="キーワードを入力して検索">
+                    <button class="btn btn-outline-success" type="button" id="button-addon2"><i class="fas fa-search"></i> 検索</button> -->
+                </div>
             </div>
             <!-- 商品リスト -->
             <div id="product-display">
                 <!-- 初期状態で全ての商品を表示 -->
                 <ul id="all-products" class="product-list active">
-                    <li>商品001</li>
-                    <li>商品002</li>
-                    <li>商品003</li>
-                    <li>商品004</li>
-                    <li>商品005</li>
-                    <li>商品006</li>
-                    <li>商品007</li>
-                    <li>商品008</li>
-                    <li>商品009</li>
-                    <li>商品010</li>
-                    <li>商品011</li>
-                    <li style="background-color: aquamarine;">商品012処理</li>
-                    <li>商品013</li>
-                    <li>商品014</li>
-                    <li style="background-color: aquamarine;">商品015処理</li>
-                    <li>商品016</li>
-                    <li>商品017</li>
-                    <li>商品018</li>
-                    <li>商品019</li>
-                    <li style="background-color: rgb(234, 255, 127);">商品020用途</li>
-                    <li style="background-color: rgb(234, 255, 127);">商品021用途</li>
-                    <li>商品022</li>
-                    <li style="background-color: rgb(234, 255, 127);">商品023用途</li>
+                    <li><a href="./page-p01-productname.html">商品001</a></li>
+                    <li><a href="./page-p01-productname.html">商品002</a></li>
+                    <li><a href="./page-p01-productname.html">商品003</a></li>
+                    <li><a href="./page-p01-productname.html">商品004</a></li>
+                    <li><a href="./page-p01-productname.html">商品005</a></li>
+                    <li><a href="./page-p01-productname.html">商品006</a></li>
+                    <li><a href="./page-p01-productname.html">商品007</a></li>
+                    <li><a href="./page-p01-productname.html">商品008</a></li>
+                    <li><a href="./page-p01-productname.html">商品009</a></li>
+                    <li><a href="./page-p01-productname.html">商品010</a></li>
+                    <li><a href="./page-p01-productname.html">商品011</a></li>
+                    <li style="background-color: aquamarine;"><a href="./page-p01-productname.html">商品012処理</a></li>
+                    <li><a href="./page-p01-productname.html">商品013</a></li>
+                    <li><a href="./page-p01-productname.html">商品014</a></li>
+                    <li style="background-color: aquamarine;"><a href="./page-p01-productname.html">商品015処理</a></li>
+                    <li><a href="./page-p01-productname.html">商品016</a></li>
+                    <li><a href="./page-p01-productname.html">商品017</a></li>
+                    <li><a href="./page-p01-productname.html">商品018</a></li>
+                    <li><a href="./page-p01-productname.html">商品019</a></li>
+                    <li style="background-color: rgb(234, 255, 127);"><a href="./page-p01-productname.html">商品020用途</li>
+                    <li style="background-color: rgb(234, 255, 127);"><a href="./page-p01-productname.html">商品021用途</li>
+                    <li><a href="./page-p01-productname.html"></a>商品022</li>
+                    <li style="background-color: rgb(234, 255, 127);"><a href="./page-p01-productname.html">商品023用途</li>
                 </ul>
         
                 <!-- 処理材料リスト -->
                 <ul id="material-products" class="product-list">
-                    <li style="background-color: aquamarine;">商品012処理</li>
-                    <li style="background-color: aquamarine;">商品015処理</li>
+                    <li style="background-color: aquamarine;"><a href="./page-p01-productname.html">商品012処理</li>
+                    <li style="background-color: aquamarine;"><a href="./page-p01-productname.html">商品015処理</li>
                 </ul>
         
                 <!-- 用途リスト -->
                 <ul id="purpose-products" class="product-list">
-                    <li style="background-color: rgb(234, 255, 127);">商品020用途</li>
-                    <li style="background-color: rgb(234, 255, 127);">商品021用途</li>
-                    <li style="background-color: rgb(234, 255, 127);">商品023用途</li>
+                    <li style="background-color: rgb(234, 255, 127);"><a href="./page-p01-productname.html">商品020用途</a></li>
+                    <li style="background-color: rgb(234, 255, 127);"><a href="./page-p01-productname.html">商品021用途</a></li>
+                    <li style="background-color: rgb(234, 255, 127);"><a href="./page-p01-productname.html">商品023用途</a></li>
                 </ul>
             </div>
         </section>
