@@ -81,5 +81,5 @@ get_header('product');
     </main>
 
 <?php
-get_footer();
+get_footer('product');
 ?>
