@@ -23,6 +23,16 @@ function enqueue_custom_styles()
         array(), // 依存関係なし
         filemtime(get_template_directory() . '/assets/scss/home.css') // キャッシュバスターを追加
     );
+
+    // page-products01.php ページの場合に products.css を読み込む
+    if (is_page_template('page-products01.php')) {
+        wp_enqueue_style(
+            'products-style',
+            $uri . '/assets/scss/products.css',
+            array(), // 依存関係なし
+            filemtime(get_template_directory() . '/assets/scss/products.css') // キャッシュバスターを追加
+        );
+    }
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_styles');
 ?>
