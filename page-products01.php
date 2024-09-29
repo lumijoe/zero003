@@ -55,14 +55,14 @@ get_header('product');
                     <li><a href="./page-p01-productname.html" tabindex="0">商品007</a></li>
                     <li><a href="./page-p01-productname.html" tabindex="0">商品008</a></li>
                     <li><a href="./page-p01-productname.html" tabindex="0">商品009</a></li>
+                </div>
+                <div style="background-color: #dfa3a3; height:fit-content;" class="category">カテゴリC
                     <li><a href="./page-p01-productname.html" tabindex="0">商品010</a></li>
                     <li><a href="./page-p01-productname.html" tabindex="0">商品011</a></li>
                 </div>
-                <div style="background-color: #dfa3a3; height:fit-content;" class="category">カテゴリC
+                <div style="background-color: #dfa3a3; height:fit-content;" class="category">カテゴリD
                     <li style="background-color: aquamarine;"><a href="./page-p01-productname.html" tabindex="0">商品012処理</a></li>
                     <li><a href="./page-p01-productname.html" tabindex="0">商品013</a></li>
-                </div>
-                <div style="background-color: #dfa3a3; height:fit-content;" class="category">カテゴリD
                     <li><a href="./page-p01-productname.html" tabindex="0">商品014</a></li>
                     <li style="background-color: aquamarine;"><a href="./page-p01-productname.html" tabindex="0">商品015処理</a></li>
                     <li><a href="./page-p01-productname.html" tabindex="0">商品016</a></li>
@@ -73,6 +73,8 @@ get_header('product');
                 <div style="background-color: #dfa3a3; height:fit-content;" class="category">カテゴリE
                     <li style="background-color: rgb(234, 255, 127);"><a href="./page-p01-productname.html" tabindex="0">商品020用途</a></li>
                     <li style="background-color: rgb(234, 255, 127);"><a href="./page-p01-productname.html" tabindex="0">商品021用途</a></li>
+                </div>
+                <div style="background-color: #dfa3a3; height:fit-content;" class="category">カテゴリF
                     <li><a href="./page-p01-productname.html" tabindex="0">商品022</a></li>
                     <li style="background-color: rgb(234, 255, 127);"><a href="./page-p01-productname.html" tabindex="0">商品023用途</a></li>
                     <li style="background-color: aquamarine;"><a href="./page-p01-productname.html" tabindex="0">商品024処理</a></li>
