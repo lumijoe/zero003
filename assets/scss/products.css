@@ -1,4 +1,20 @@
 @charset "UTF-8";
+.l-search {
+  margin: 20px auto;
+  width: 50%;
+  max-width: 450px;
+  text-align: center;
+  border: 1px solid #232323;
+  display: flex;
+  justify-content: space-evenly;
+}
+.l-search input {
+  width: 90%;
+}
+.l-search span {
+  pointer-events: none;
+}
+
 .product-list {
   display: none;
   /* 初期表示は非表示 */
@@ -24,4 +40,9 @@
 .product-list li:hover {
   background-color: #e0f7fa;
   cursor: pointer;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  color: #757575;
 }/*# sourceMappingURL=products.css.map */

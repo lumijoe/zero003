@@ -14,34 +14,6 @@
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/products.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>zero3 | 分野Aページ</title>
-    <!-- <style>
-        .product-list {
-            display: none;
-            /* 初期表示は非表示 */
-        }
-
-        .product-list.active {
-            display: flex;
-            /* 有効なリストを表示 */
-            flex-wrap: wrap;
-            gap: 10px;
-            justify-content: center;
-            margin: 20px 0;
-        }
-
-        .product-list li {
-            list-style: none;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-        }
-
-        .product-list li:hover {
-            background-color: #e0f7fa;
-            cursor: pointer;
-        }
-    </style> -->
     <?php wp_head(); ?>
 </head>
 

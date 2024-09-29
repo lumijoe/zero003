@@ -17,10 +17,6 @@ get_header('product');
     <section style="background-color: rgb(251, 251, 251); height: auto;">
         <div style="background-color: #dfa3a3; margin: 0 auto;">
             <h2>Product</h2>
-            <!-- <div style="margin: 0 auto; width: 80%; text-align: center; padding-bottom: 20px;">
-                    <input type="text" id="search-input" style="border: 1px solid #232323; width: 400px;" placeholder="キーワードを入力して検索">
-                    <button class="btn btn-outline-success" type="button" id="button-addon2"><i class="fas fa-search"></i> 検索</button>
-                </div> -->
         </div>
         <div>
             <ul style="display: flex; flex-direction: row; width: 80%; align-content: center; justify-content: center; gap: 20px; margin: 0 auto;">
@@ -29,10 +25,11 @@ get_header('product');
                 <li><button class="btn btn-outline-success" type="button" id="btn-purpose"><i class="fas fa-search"></i>用途で検索</button></li>
             </ul>
             <!-- 検索用の入力フィールド下段 -->
-            <div style="margin: 0 auto; width: 80%; text-align: center; padding-top: 20px;">
-                <input type="text" id="search-input" style="border: 1px solid #232323; width: 400px;" placeholder="キーワードを入力して検索 icon">
-                <!-- <button class="btn btn-outline-success" type="button" id="button-addon2"><i class="fas fa-search"></i> 検索</button> -->
+            <div class="l-search">
+                <input type="text" id="search-input" placeholder="キーワードを入力して検索">
+                <span class="material-symbols-outlined" id="search-icon">search</span>
             </div>
+
         </div>
         <!-- 商品リスト -->
         <div id="product-display">
@@ -120,13 +117,12 @@ get_header('product');
             });
 
             // ホバーを外したときに、デフォルトの全リストに戻す
-            const searchButtons = [allBtn, materialBtn, purposeBtn];
-            searchButtons.forEach(function(btn) {
-                btn.addEventListener('mouseleave', function() {
-                    // デフォルトのリスト（全商品）を表示
-                    showProducts(allProducts);
-                });
-            });
+            // const searchButtons = [allBtn, materialBtn, purposeBtn];
+            // searchButtons.forEach(function(btn) {
+            //     btn.addEventListener('mouseleave', function() {
+            //         showProducts(allProducts);
+            //     });
+            // });
 
             // キーワードによるフィルタリング関数
             function filterProducts(keyword) {

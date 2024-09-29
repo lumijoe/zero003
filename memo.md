@@ -1,13 +1,14 @@
 ## ホバーから外れたらすぐに結果表示がどこかに行ってしまう仕様（今回はこれではないがコード保持）
+
 document.addEventListener('DOMContentLoaded', function () {
-    const allProducts = document.getElementById('all-products');
-    const materialProducts = document.getElementById('material-products');
-    const purposeProducts = document.getElementById('purpose-products');
-    const searchInput = document.querySelector('input[type="text"]');
-    const allBtn = document.getElementById('btn-all');
-    const materialBtn = document.getElementById('btn-material');
-    const purposeBtn = document.getElementById('btn-purpose');
-    
+const allProducts = document.getElementById('all-products');
+const materialProducts = document.getElementById('material-products');
+const purposeProducts = document.getElementById('purpose-products');
+const searchInput = document.querySelector('input[type="text"]');
+const allBtn = document.getElementById('btn-all');
+const materialBtn = document.getElementById('btn-material');
+const purposeBtn = document.getElementById('btn-purpose');
+
     // デフォルトで一覧表示をアクティブに設定
     allProducts.classList.add('active');
 
@@ -78,9 +79,11 @@ document.addEventListener('DOMContentLoaded', function () {
             item.style.display = 'block'; // 全アイテムを表示
         });
     }
+
 });
 
-＊＊＊＊＊htmlはこちら
+＊＊＊＊＊html はこちら
+
 <div>
                     <!-- 検索用の入力フィールド -->
                     <input type="text" id="search-input" style="border: 1px solid #232323; width: 400px;" placeholder="キーワードを入力して検索">
@@ -136,3 +139,13 @@ document.addEventListener('DOMContentLoaded', function () {
                     <li style="background-color: rgb(234, 255, 127);">商品023用途</li>
                 </ul>
             </div>
+
+## ホバーを外した時にデフォルト一覧表示させるコード（（今回使用しない）
+
+// ホバーを外したときに、デフォルトの全リストに戻す
+// const searchButtons = [allBtn, materialBtn, purposeBtn];
+// searchButtons.forEach(function(btn) {
+// btn.addEventListener('mouseleave', function() {
+// showProducts(allProducts);
+// });
+// });
