@@ -149,3 +149,24 @@ const purposeBtn = document.getElementById('btn-purpose');
 // showProducts(allProducts);
 // });
 // });
+
+## li タグがフォーカスされた時にエンターを可能にする挙動(今回使用しない)
+
+// 選択された list でキーボードエンター遷移を可能にする
+document.addEventListener('DOMContentLoaded', function() {
+const listItems = document.querySelectorAll('#material-products li');
+listItems.forEach(function(item) {
+item.setAttribute('tabindex', '0');
+
+                // キーダウンイベントを追加
+                item.addEventListener('keydown', function(event) {
+                    // エンターキー（Enter）のキーコードは13
+                    if (event.key === 'Enter') {
+                        const link = item.querySelector('a'); // <li>内の<a>を取得
+                        if (link) {
+                            window.location.href = link.href; // リンク先に移動
+                        }
+                    }
+                });
+            });
+        });
