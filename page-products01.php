@@ -33,24 +33,36 @@ get_header('product');
         </div>
         <!-- 商品リスト -->
         <div id="product-display">
+            <div class="container">
+                <div id="left-column" class="left-column">
+                    <!-- 左カラムのカテゴリが配置される -->
+                </div>
+                <div id="right-column" class="right-column">
+                    <!-- 右カラムのカテゴリが配置される -->
+                </div>
+            </div>
             <!-- 初期状態で全ての商品を表示 -->
             <ul id="all-products" class="product-list active">
-                <div style="background-color: #dfa3a3;">カテゴリA
+                <div style="background-color: #dfa3a3; height:fit-content;" class="category">カテゴリA
                     <li><a href="./page-p01-productname.html" tabindex="0">商品001</a></li>
                     <li><a href="./page-p01-productname.html" tabindex="0">商品002</a></li>
                     <li><a href="./page-p01-productname.html" tabindex="0">商品003</a></li>
                     <li><a href="./page-p01-productname.html" tabindex="0">商品004</a></li>
                     <li><a href="./page-p01-productname.html" tabindex="0">商品005</a></li>
                     <li><a href="./page-p01-productname.html" tabindex="0">商品006</a></li>
+                </div>
+                <div style="background-color: #dfa3a3; height:fit-content;" class="category">カテゴリB
                     <li><a href="./page-p01-productname.html" tabindex="0">商品007</a></li>
                     <li><a href="./page-p01-productname.html" tabindex="0">商品008</a></li>
                     <li><a href="./page-p01-productname.html" tabindex="0">商品009</a></li>
                     <li><a href="./page-p01-productname.html" tabindex="0">商品010</a></li>
                     <li><a href="./page-p01-productname.html" tabindex="0">商品011</a></li>
                 </div>
-                <div style="background-color: #dfa3a3;">カテゴリB
+                <div style="background-color: #dfa3a3; height:fit-content;" class="category">カテゴリC
                     <li style="background-color: aquamarine;"><a href="./page-p01-productname.html" tabindex="0">商品012処理</a></li>
                     <li><a href="./page-p01-productname.html" tabindex="0">商品013</a></li>
+                </div>
+                <div style="background-color: #dfa3a3; height:fit-content;" class="category">カテゴリD
                     <li><a href="./page-p01-productname.html" tabindex="0">商品014</a></li>
                     <li style="background-color: aquamarine;"><a href="./page-p01-productname.html" tabindex="0">商品015処理</a></li>
                     <li><a href="./page-p01-productname.html" tabindex="0">商品016</a></li>
@@ -58,7 +70,7 @@ get_header('product');
                     <li><a href="./page-p01-productname.html" tabindex="0">商品018</a></li>
                     <li><a href="./page-p01-productname.html" tabindex="0">商品019</a></li>
                 </div>
-                <div style="background-color: #dfa3a3;">カテゴリC
+                <div style="background-color: #dfa3a3; height:fit-content;" class="category">カテゴリE
                     <li style="background-color: rgb(234, 255, 127);"><a href="./page-p01-productname.html" tabindex="0">商品020用途</a></li>
                     <li style="background-color: rgb(234, 255, 127);"><a href="./page-p01-productname.html" tabindex="0">商品021用途</a></li>
                     <li><a href="./page-p01-productname.html" tabindex="0">商品022</a></li>
@@ -70,6 +82,7 @@ get_header('product');
                     <li style="background-color: rgb(234, 255, 127);"><a href="./page-p01-productname.html" tabindex="0">商品028用途</a></li>
                 </div>
             </ul>
+
 
             <!-- 処理材料リスト -->
             <ul id="material-products" class="product-list">
@@ -96,6 +109,7 @@ get_header('product');
             </ul>
         </div>
     </section>
+
     <section style="background-color: rgb(157, 179, 179); height: 314px;">CTA_ダウンロード & 問い合わせ</section>
     <!-- footer -->
     <footer style="height: 400px; background-color: bisque;">
@@ -174,6 +188,36 @@ get_header('product');
                     item.style.display = 'block'; // 全アイテムを表示
                 });
             }
+        });
+        // 高さの処理
+        document.addEventListener('DOMContentLoaded', () => {
+            const categories = document.querySelectorAll('#all-products .category');
+            const leftColumn = document.getElementById('left-column');
+            const rightColumn = document.getElementById('right-column');
+
+            // 各カテゴリの高さを取得し、配列に格納
+            const heights = Array.from(categories).map(category => category.scrollHeight);
+            const totalHeight = heights.reduce((sum, height) => sum + height, 0);
+            const halfHeight = totalHeight / 2;
+
+            let currentLeftHeight = 0;
+            let currentRightHeight = 0;
+
+            // 各カテゴリを順番に左右に振り分ける
+            categories.forEach((category, index) => {
+                const categoryHeight = heights[index];
+
+                if (currentLeftHeight + categoryHeight <= halfHeight) {
+                    leftColumn.appendChild(category.cloneNode(true));
+                    currentLeftHeight += categoryHeight;
+                } else {
+                    rightColumn.appendChild(category.cloneNode(true));
+                    currentRightHeight += categoryHeight;
+                }
+            });
+
+            console.log('左カラムの合計高さ: ' + currentLeftHeight + 'px');
+            console.log('右カラムの合計高さ: ' + currentRightHeight + 'px');
         });
     </script>
     </body>

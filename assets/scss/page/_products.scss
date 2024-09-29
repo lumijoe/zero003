@@ -55,3 +55,32 @@
     outline: 2px solid blue; /* フォーカス時に青いアウトライン */
     outline-offset: 2px; /* アウトラインのオフセット */
 }
+
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+        }
+
+        .left-column, .right-column {
+            width: 45%;
+            background-color: #f0f0f0;
+            padding: 10px;
+        }
+
+        .category {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #dfa3a3;
+        }
+
+        .product-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .product-list li {
+            margin: 5px 0;
+        }
+ 
