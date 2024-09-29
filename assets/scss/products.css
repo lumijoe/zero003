@@ -1,4 +1,8 @@
 @charset "UTF-8";
+a {
+  color: #232323;
+}
+
 .l-search {
   margin: 20px auto;
   width: 50%;
@@ -77,4 +81,8 @@
 
 .product-list li {
   margin: 5px 0;
+}
+
+.highlight {
+  color: red;
 }/*# sourceMappingURL=products.css.map */

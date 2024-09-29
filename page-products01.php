@@ -43,7 +43,7 @@ get_header('product');
             </div>
             <!-- 初期状態で全ての商品を表示 -->
             <ul id="all-products" class="product-list active">
-                <div style="background-color: #dfa3a3; height:fit-content;" class="category">カテゴリA
+                <div style="background-color: #dfa3a3; height:fit-content;" class="category"><span style="background-color: #232323; color: #fff!important; display: block; margin-left: -10px; margin-right: -10px; margin-top: -10px; padding-left: 5px;">カテゴリA</span>
                     <li><a href="./page-p01-productname.html" tabindex="0">商品001</a></li>
                     <li><a href="./page-p01-productname.html" tabindex="0">商品002</a></li>
                     <li><a href="./page-p01-productname.html" tabindex="0">商品003</a></li>
@@ -51,16 +51,16 @@ get_header('product');
                     <li><a href="./page-p01-productname.html" tabindex="0">商品005</a></li>
                     <li><a href="./page-p01-productname.html" tabindex="0">商品006</a></li>
                 </div>
-                <div style="background-color: #dfa3a3; height:fit-content;" class="category">カテゴリB
+                <div style="background-color: #dfa3a3; height:fit-content;" class="category"><span style="background-color: #232323; color: #fff!important; display: block; margin-left: -10px; margin-right: -10px; margin-top: -10px; padding-left: 5px;">カテゴリB</span>
                     <li><a href="./page-p01-productname.html" tabindex="0">商品007</a></li>
                     <li><a href="./page-p01-productname.html" tabindex="0">商品008</a></li>
                     <li><a href="./page-p01-productname.html" tabindex="0">商品009</a></li>
                 </div>
-                <div style="background-color: #dfa3a3; height:fit-content;" class="category">カテゴリC
+                <div style="background-color: #dfa3a3; height:fit-content;" class="category"><span style="background-color: #232323; color: #fff!important; display: block; margin-left: -10px; margin-right: -10px; margin-top: -10px; padding-left: 5px;">カテゴリC</span>
                     <li><a href="./page-p01-productname.html" tabindex="0">商品010</a></li>
                     <li><a href="./page-p01-productname.html" tabindex="0">商品011</a></li>
                 </div>
-                <div style="background-color: #dfa3a3; height:fit-content;" class="category">カテゴリD
+                <div style="background-color: #dfa3a3; height:fit-content;" class="category"><span style="background-color: #232323; color: #fff!important; display: block; margin-left: -10px; margin-right: -10px; margin-top: -10px; padding-left: 5px;">カテゴリD</span>
                     <li style="background-color: aquamarine;"><a href="./page-p01-productname.html" tabindex="0">商品012処理</a></li>
                     <li><a href="./page-p01-productname.html" tabindex="0">商品013</a></li>
                     <li><a href="./page-p01-productname.html" tabindex="0">商品014</a></li>
@@ -70,11 +70,11 @@ get_header('product');
                     <li><a href="./page-p01-productname.html" tabindex="0">商品018</a></li>
                     <li><a href="./page-p01-productname.html" tabindex="0">商品019</a></li>
                 </div>
-                <div style="background-color: #dfa3a3; height:fit-content;" class="category">カテゴリE
+                <div style="background-color: #dfa3a3; height:fit-content;" class="category"><span style="background-color: #232323; color: #fff!important; display: block; margin-left: -10px; margin-right: -10px; margin-top: -10px; padding-left: 5px;">カテゴリE</span>
                     <li style="background-color: rgb(234, 255, 127);"><a href="./page-p01-productname.html" tabindex="0">商品020用途</a></li>
                     <li style="background-color: rgb(234, 255, 127);"><a href="./page-p01-productname.html" tabindex="0">商品021用途</a></li>
                 </div>
-                <div style="background-color: #dfa3a3; height:fit-content;" class="category">カテゴリF
+                <div style="background-color: #dfa3a3; height:fit-content;" class="category"><span style="background-color: #232323; color: #fff!important; display: block; margin-left: -10px; margin-right: -10px; margin-top: -10px; padding-left: 5px;">カテゴリF</span>
                     <li><a href="./page-p01-productname.html" tabindex="0">商品022</a></li>
                     <li style="background-color: rgb(234, 255, 127);"><a href="./page-p01-productname.html" tabindex="0">商品023用途</a></li>
                     <li style="background-color: aquamarine;"><a href="./page-p01-productname.html" tabindex="0">商品024処理</a></li>
@@ -144,15 +144,53 @@ get_header('product');
                 showProducts(allProducts); // 一覧を表示
             });
 
-            materialBtn.addEventListener('mouseenter', function() {
-                resetSearch(); // キーワード検索をリセット
-                showProducts(materialProducts); // 処理材料のリストを表示
-            });
+            // materialBtn.addEventListener('mouseenter', function() {
+            //     resetSearch(); // キーワード検索をリセット
+            //     showProducts(materialProducts); // 処理材料のリストを表示
+            // });
 
             purposeBtn.addEventListener('mouseenter', function() {
                 resetSearch(); // キーワード検索をリセット
                 showProducts(purposeProducts); // 用途のリストを表示
             });
+            materialBtn.addEventListener('mouseenter', function() {
+                resetSearch(); // キーワード検索をリセット
+                showProducts(materialProducts); // 処理材料のリストを表示
+
+                // 処理材料リストを取得
+                const productItems = materialProducts.querySelectorAll('li a');
+                const productNames = Array.from(productItems).map(item => item.textContent.trim());
+
+                // 左右のカラムに表示されている文字列と比較
+                const columns = document.querySelectorAll('#left-column, #right-column');
+                columns.forEach(column => {
+                    const textElements = column.querySelectorAll('*');
+                    textElements.forEach(element => {
+                        if (productNames.includes(element.textContent.trim())) {
+                            element.classList.add('highlight'); // 一致するテキストにクラスを追加
+                        }
+                    });
+                });
+            });
+
+            // ホバー解除時にテキスト色を元に戻す（mouseleave イベント）
+            materialBtn.addEventListener('mouseleave', function() {
+                resetTextColors(); // ホバー解除時に色をリセット
+            });
+
+            // テキスト色をリセットする関数
+            function resetTextColors() {
+                const columns = document.querySelectorAll('#left-column, #right-column');
+                columns.forEach(column => {
+                    const textElements = column.querySelectorAll('*');
+                    textElements.forEach(element => {
+                        element.classList.remove('highlight'); // クラスを削除して元のスタイルに戻す
+                    });
+                });
+            }
+            // ここまで
+
+
 
             // キーワードによるフィルタリング関数
             function filterProducts(keyword) {
