@@ -21,17 +21,17 @@
 <body>
     <header class="l-header">
         <section class="header-inner">
-            <h1 class="header-logo">logo</h1>
+            <h1 class="header-logo"><a href="<?php echo esc_url(home_url()); ?>" style="color:#fff!important;">logo</a></h1>
             <nav class="header-nav c-flexcol">
-                <ul class="header-nav--first c-flexrow">
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
+                <ul class="header-nav--first c-flexrow" style="gap: 20px;">
+                    <li style="color:#fff!important;"><a href="<?php echo esc_url(home_url('/products01')); ?>" style="color:#fff!important;">分野A</a></li>
+                    <li style="color:#fff!important;"><a href="<?php echo esc_url(home_url('/products02')); ?>" style="color:#fff!important;">分野B</a></li>
+                    <li style="color:#fff;">3</li>
                 </ul>
-                <ul class="header-nav--second c-flexrow">
-                    <li>4</li>
-                    <li>5</li>
-                    <li>6</li>
+                <ul class="header-nav--second c-flexrow" style="gap: 20px;">
+                    <li style="color:#fff;">4</li>
+                    <li style="color:#fff;">5</li>
+                    <li style="color:#fff;">6</li>
                 </ul>
             </nav>
         </section>

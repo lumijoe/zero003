@@ -9,6 +9,7 @@ get_header();
 ?>
 <main>
     <section class="hero" style="background-color: aqua; height: 350px;">
+        <h2>トップページです</h2>
         <h2>Hero Section</h2>
     </section>
     <section class="topics" style="background-color: rgb(0, 255, 8); height: 350px;">
