@@ -111,6 +111,48 @@ get_header('product');
             </ul>
         </div>
     </section>
+    <!-- WPテスト -->
+    <section>
+        <h1>WP ACF投稿タクソノミー別UIテスト</h1>
+        <?php
+        // 投稿タイプを指定（例: 'post'）し、全ての投稿を取得
+        $args = array(
+            'post_type' => 'post', // 投稿タイプ
+            'posts_per_page' => -1 // 全ての投稿を取得
+        );
+        $all_posts = new WP_Query($args);
+
+        // 投稿が存在する場合にループ処理
+        if ($all_posts->have_posts()) {
+            echo '<ul>';
+            while ($all_posts->have_posts()) {
+                $all_posts->the_post(); // 投稿データをセット
+
+                // 投稿のタクソノミー 'a_material' を取得
+                $terms = get_the_terms(get_the_ID(), 'a_material');
+
+                // タクソノミーの取得が成功し、タクソノミーが存在する場合に表示
+                if ($terms && ! is_wp_error($terms)) {
+                    echo '<li>' . get_the_title() . ' のタクソノミー: ';
+                    echo '<ul>';
+                    foreach ($terms as $term) {
+                        echo '<li>' . esc_html($term->name) . '</li>';
+                    }
+                    echo '</ul>';
+                    echo '</li>';
+                } else {
+                    echo '<li>' . get_the_title() . ' のタクソノミーが見つかりませんでした。</li>';
+                }
+            }
+            echo '</ul>';
+        } else {
+            echo '<p>投稿が見つかりませんでした。</p>';
+        }
+
+        // 投稿データのリセット
+        wp_reset_postdata();
+        ?>
+    </section>
 
     <section style="background-color: rgb(157, 179, 179); height: 314px;">CTA_ダウンロード & 問い合わせ</section>
     <!-- footer -->
