@@ -45,4 +45,9 @@
 .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
   color: #757575;
+}
+
+.product-list li:focus-within {
+  outline: 2px solid blue; /* フォーカス時に青いアウトライン */
+  outline-offset: 2px; /* アウトラインのオフセット */
 }/*# sourceMappingURL=products.css.map */

@@ -35,42 +35,64 @@ get_header('product');
         <div id="product-display">
             <!-- 初期状態で全ての商品を表示 -->
             <ul id="all-products" class="product-list active">
-                <li><a href="./page-p01-productname.html">商品001</a></li>
-                <li><a href="./page-p01-productname.html">商品002</a></li>
-                <li><a href="./page-p01-productname.html">商品003</a></li>
-                <li><a href="./page-p01-productname.html">商品004</a></li>
-                <li><a href="./page-p01-productname.html">商品005</a></li>
-                <li><a href="./page-p01-productname.html">商品006</a></li>
-                <li><a href="./page-p01-productname.html">商品007</a></li>
-                <li><a href="./page-p01-productname.html">商品008</a></li>
-                <li><a href="./page-p01-productname.html">商品009</a></li>
-                <li><a href="./page-p01-productname.html">商品010</a></li>
-                <li><a href="./page-p01-productname.html">商品011</a></li>
-                <li style="background-color: aquamarine;"><a href="./page-p01-productname.html">商品012処理</a></li>
-                <li><a href="./page-p01-productname.html">商品013</a></li>
-                <li><a href="./page-p01-productname.html">商品014</a></li>
-                <li style="background-color: aquamarine;"><a href="./page-p01-productname.html">商品015処理</a></li>
-                <li><a href="./page-p01-productname.html">商品016</a></li>
-                <li><a href="./page-p01-productname.html">商品017</a></li>
-                <li><a href="./page-p01-productname.html">商品018</a></li>
-                <li><a href="./page-p01-productname.html">商品019</a></li>
-                <li style="background-color: rgb(234, 255, 127);"><a href="./page-p01-productname.html">商品020用途</li>
-                <li style="background-color: rgb(234, 255, 127);"><a href="./page-p01-productname.html">商品021用途</li>
-                <li><a href="./page-p01-productname.html"></a>商品022</li>
-                <li style="background-color: rgb(234, 255, 127);"><a href="./page-p01-productname.html">商品023用途</li>
+                <li><a href="./page-p01-productname.html" tabindex="0">商品001</a></li>
+                <li><a href="./page-p01-productname.html" tabindex="0">商品002</a></li>
+                <li><a href="./page-p01-productname.html" tabindex="0">商品003</a></li>
+                <li><a href="./page-p01-productname.html" tabindex="0">商品004</a></li>
+                <li><a href="./page-p01-productname.html" tabindex="0">商品005</a></li>
+                <li><a href="./page-p01-productname.html" tabindex="0">商品006</a></li>
+                <li><a href="./page-p01-productname.html" tabindex="0">商品007</a></li>
+                <li><a href="./page-p01-productname.html" tabindex="0">商品008</a></li>
+                <li><a href="./page-p01-productname.html" tabindex="0">商品009</a></li>
+                <li><a href="./page-p01-productname.html" tabindex="0">商品010</a></li>
+                <li><a href="./page-p01-productname.html" tabindex="0">商品011</a></li>
+                <li tabindex="0" style="background-color: aquamarine;"><a href="./page-p01-productname.html" tabindex="0">商品012処理</a></li>
+                <li><a href="./page-p01-productname.html" tabindex="0">商品013</a></li>
+                <li><a href="./page-p01-productname.html" tabindex="0">商品014</a></li>
+                <li tabindex="0" style="background-color: aquamarine;"><a href="./page-p01-productname.html" tabindex="0">商品015処理</a></li>
+                <li><a href="./page-p01-productname.html" tabindex="0">商品016</a></li>
+                <li><a href="./page-p01-productname.html" tabindex="0">商品017</a></li>
+                <li><a href="./page-p01-productname.html" tabindex="0">商品018</a></li>
+                <li><a href="./page-p01-productname.html" tabindex="0">商品019</a></li>
+                <li tabindex="0" style="background-color: rgb(234, 255, 127);"><a href="./page-p01-productname.html" tabindex="0">商品020用途</a></li>
+                <li style="background-color: rgb(234, 255, 127);"><a href="./page-p01-productname.html" tabindex="0">商品021用途</a></li>
+                <li><a href="./page-p01-productname.html" tabindex="0">商品022</a></li>
+                <li style="background-color: rgb(234, 255, 127);"><a href="./page-p01-productname.html" tabindex="0">商品023用途</a></li>
+                <li style="background-color: aquamarine;"><a href="./page-p01-productname.html" tabindex="0">商品024処理</a></li>
+                <li tabindex="0" style="background-color: aquamarine;"><a href="./page-p01-productname.html" tabindex="0">商品025処理</a></li>
+                <li style="background-color: rgb(234, 255, 127);"><a href="./page-p01-productname.html" tabindex="0">商品026用途</a></li>
+                <li style="background-color: rgb(234, 255, 127);"><a href="./page-p01-productname.html" tabindex="0">商品027用途</a></li>
+                <li style="background-color: rgb(234, 255, 127);"><a href="./page-p01-productname.html" tabindex="0">商品028用途</a></li>
             </ul>
 
             <!-- 処理材料リスト -->
             <ul id="material-products" class="product-list">
-                <li style="background-color: aquamarine;"><a href="./page-p01-productname.html">商品012処理</li>
-                <li style="background-color: aquamarine;"><a href="./page-p01-productname.html">商品015処理</li>
+                <li style="background-color: aquamarine;"><a href="./page-p01-productname.html" tabindex="0">商品012処理</a></li>
+                <li style="background-color: aquamarine;"><a href="./page-p01-productname.html" tabindex="0">商品015処理</a></li>
+                <li style="background-color: aquamarine;"><a href="./page-p01-productname.html" tabindex="0">商品024処理</a></li>
+                <li style="background-color: aquamarine;"><a href="./page-p01-productname.html" tabindex="0">商品025処理</a></li>
             </ul>
 
             <!-- 用途リスト -->
             <ul id="purpose-products" class="product-list">
-                <li style="background-color: rgb(234, 255, 127);"><a href="./page-p01-productname.html">商品020用途</a></li>
-                <li style="background-color: rgb(234, 255, 127);"><a href="./page-p01-productname.html">商品021用途</a></li>
-                <li style="background-color: rgb(234, 255, 127);"><a href="./page-p01-productname.html">商品023用途</a></li>
+                <li style="background-color: rgb(234, 255, 127);">
+                    <a href="./page-p01-productname.html" tabindex="0">商品020用途</a>
+                </li>
+                <li style="background-color: rgb(234, 255, 127);">
+                    <a href="./page-p01-productname.html" tabindex="0">商品021用途</a>
+                </li>
+                <li style="background-color: rgb(234, 255, 127);">
+                    <a href="./page-p01-productname.html" tabindex="0">商品023用途</a>
+                </li>
+                <li style="background-color: rgb(234, 255, 127);">
+                    <a href="./page-p01-productname.html" tabindex="0">商品026用途</a>
+                </li>
+                <li style="background-color: rgb(234, 255, 127);">
+                    <a href="./page-p01-productname.html" tabindex="0">商品027用途</a>
+                </li>
+                <li style="background-color: rgb(234, 255, 127);">
+                    <a href="./page-p01-productname.html" tabindex="0">商品028用途</a>
+                </li>
             </ul>
         </div>
     </section>
@@ -116,14 +138,6 @@ get_header('product');
                 showProducts(purposeProducts); // 用途のリストを表示
             });
 
-            // ホバーを外したときに、デフォルトの全リストに戻す
-            // const searchButtons = [allBtn, materialBtn, purposeBtn];
-            // searchButtons.forEach(function(btn) {
-            //     btn.addEventListener('mouseleave', function() {
-            //         showProducts(allProducts);
-            //     });
-            // });
-
             // キーワードによるフィルタリング関数
             function filterProducts(keyword) {
                 clearActiveLists(); // 他のリストを非表示
@@ -160,6 +174,24 @@ get_header('product');
                     item.style.display = 'block'; // 全アイテムを表示
                 });
             }
+        });
+        // 選択されたlistでキーボードエンター遷移を可能にする
+        document.addEventListener('DOMContentLoaded', function() {
+            const listItems = document.querySelectorAll('#material-products li');
+            listItems.forEach(function(item) {
+                item.setAttribute('tabindex', '0');
+
+                // キーダウンイベントを追加
+                item.addEventListener('keydown', function(event) {
+                    // エンターキー（Enter）のキーコードは13
+                    if (event.key === 'Enter') {
+                        const link = item.querySelector('a'); // <li>内の<a>を取得
+                        if (link) {
+                            window.location.href = link.href; // リンク先に移動
+                        }
+                    }
+                });
+            });
         });
     </script>
     </body>

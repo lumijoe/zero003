@@ -50,3 +50,8 @@
       'opsz' 24;
       color: #757575;
 }
+
+.product-list li:focus-within {
+    outline: 2px solid blue; /* フォーカス時に青いアウトライン */
+    outline-offset: 2px; /* アウトラインのオフセット */
+}
