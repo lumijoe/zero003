@@ -14,15 +14,19 @@
     <title>zero3 | 分野Aページ</title>
     <style>
         .product-list {
-            display: none; /* 初期表示は非表示 */
+            display: none;
+            /* 初期表示は非表示 */
         }
+
         .product-list.active {
-            display: flex; /* 有効なリストを表示 */
+            display: flex;
+            /* 有効なリストを表示 */
             flex-wrap: wrap;
             gap: 10px;
             justify-content: center;
             margin: 20px 0;
         }
+
         .product-list li {
             list-style: none;
             padding: 10px;
@@ -30,6 +34,7 @@
             border-radius: 5px;
             background-color: #f9f9f9;
         }
+
         .product-list li:hover {
             background-color: #e0f7fa;
             cursor: pointer;
@@ -55,6 +60,5 @@
                 </ul>
             </nav>
         </section>
-
     </header>
     <main>
