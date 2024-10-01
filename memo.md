@@ -171,5 +171,89 @@ item.setAttribute('tabindex', '0');
             });
         });
 
-## 今回使用しないコードを一旦保留しておくタクそのミー表示方法も一部変更あり
+## タクソノミーを表示させるコード（今回は使用しない）
+<section class="section-contents" id="contribution">
+  <div class="wrapper">
+    <?php
+    $contribution_obj = get_page_by_path('work');
+    $post = $contribution_obj;
+    setup_postdata($post);
+    $contribution_title = get_the_title();
+    ?>
+    <span class="section-title-en"><?php the_field('english_title'); ?></span>
+    <h2 class="section-title"><?php the_title(); ?></h2>
+    <p class="section-lead"><?php echo get_the_excerpt(); ?></p>
+    <?php wp_reset_postdata(); ?>
+    <div class="articles">
+      <?php
+      $args = array(
+        'post_type' => 'works',
+        'post_status' => 'publish',
+        'posts_per_page' => 3,
+      );
+
+      $the_query = new WP_Query($args);
+      if ($the_query->have_posts()) :
+        while ($the_query->have_posts()) : $the_query->the_post();
+      ?>
+          <article class="article-card">
+            <a class="card-link" href="<?php the_permalink(); ?>">
+              <div class="card-inner">
+                <div class="card-image">
+                  <?php
+                  $work_img = get_field('work_img');
+                  if ($work_img) :
+                  ?>
+                    <img src="<?php echo esc_url($work_img); ?>" alt="" style="height: 445px;">
+                  <?php endif; ?>
+                </div>
+                <div class="card-body">
+                  <p class="title" style="font-weight: bold; padding-bottom: 10px;"><?php the_title(); ?></p>
+                  <div style="display: flex; flex-wrap: wrap; gap: 5px; max-width: 300px;">
+                    <?php
+                    $taxonomies = ['worktype', 'styletype', 'sizetype'];
+                    foreach ($taxonomies as $taxonomy) {
+                      $terms = get_the_terms($post->ID, $taxonomy);
+                      if ($terms) :
+                    ?>
+                        <ul class="works-link-category" style="display: flex;  flex-direction: row; gap:5px; flex-wrap: wrap;">
+                          <?php
+                          foreach ($terms as $term) :
+                          ?>
+                            <li style="padding: 2px 8px; border-radius: 10px; border: 1px solid #232323; width: max-content; font-size:12px;">
+                              ＃<?php echo esc_html($term->name); ?>
+                            </li>
+                          <?php
+                          endforeach;
+                          ?>
+                        </ul>
+                    <?php
+                      endif;
+                    }
+                    ?>
+                  </div><!-- タクソノミー終了 -->
+                  <div class="buttonBox">
+                    <button type="button" class="seeDetail">詳しくは→</button>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </article>
+      <?php
+        endwhile;
+        wp_reset_postdata();
+      endif;
+      ?>
+    </div>
+
+
+    <!-- 施工事例 -->
+    <div class="section-buttons">
+      <button type="button" class="button button-ghost" onclick="javascript:location.href = '<?php echo esc_url(home_url('work')); ?>';">
+        <?php echo $contribution_title; ?>一覧を見る
+      </button>
+    </div>
+  </div>
+</section>
+
 
